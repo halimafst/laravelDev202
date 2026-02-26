@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'CGV')
-
 @section('content')
+
 <h2>Conditions Générales de Vente</h2>
-<p>Voici les CGV de MegaShop…</p>
+
+@foreach($sections as $index => $section)
+    <h4>{{ $index + 1 }}. {{ $section }}</h4>
+    <p>Contenu de la section {{ $section }}...</p>
+@endforeach
+
 @endsection

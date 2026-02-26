@@ -10,15 +10,15 @@ class ShopController extends Controller
         return view('index');
     }
 
-    public function contact()
-    {
-        // Page contact
-        return view('contact');
-    }
+  public function cgv()
+{
+    $sections = config('data.cgv');
+    return view('cgv', compact('sections'));
+}
 
-    public function cgv()
-    {
-        // Page CGV
-        return view('cgv');
-    }
+public function contact()
+{
+    $contact = config('data.contact');
+    return view('contact', compact('contact'));
+}
 }
